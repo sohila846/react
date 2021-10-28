@@ -29,13 +29,13 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>
-      <div className='icons'>
-        <RiCloseCircleLine
+      <button   onClick={() => removeTodo(todo.id)}>remove</button>
+        {/* <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}
           className='delete-icon'
-        />
+        /> */}
         
-      </div>
+      {/* </div> */}
     </div>
   ));
 };
